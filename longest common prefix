@@ -1,0 +1,17 @@
+class Solution:
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+        smallest = min(strs, key=len)
+        prefix=""
+        for i in range(len(smallest)):
+            ch=smallest[i]
+            for s in strs:
+                if s[i] != ch:
+                    return prefix
+            prefix+=ch
+
+        return prefix
+
+
+        
+
+
