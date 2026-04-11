@@ -1,0 +1,15 @@
+class Solution:
+    def isValid(self, s: str) -> bool:
+        open=["(","{","["];close=[")","}","]"]
+        while True:
+            removed=False
+            for i in range(1,len(s)):
+                if s[i] in close:
+                    idx=close.index(s[i])
+                    if s[i-1]==open[idx]:
+                        s=s[:i-1]+s[i+1:]
+                        removed= True
+                        break
+            if not removed:
+                break
+        return s==""
