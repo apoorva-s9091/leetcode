@@ -1,0 +1,7 @@
+class Solution:
+    def addBinary(self, a: str, b: str) -> str:
+        p= int(a,2)
+        k=int(b,2)
+        sum= p+k
+        return bin(sum)[2:]
+    
